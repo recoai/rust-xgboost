@@ -566,6 +566,9 @@ impl Drop for Booster {
     }
 }
 
+unsafe impl Send for Booster {}
+unsafe impl Sync for Booster {}
+
 /// Maps a feature index to a name and type, used when dumping models as text.
 ///
 /// See [dump_model](struct.Booster.html#method.dump_model) for usage.
